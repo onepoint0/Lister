@@ -1,0 +1,50 @@
+table.lister-table {
+  width: 100%;
+}
+
+a {
+  position : relative;
+}
+
+a span.sorting-indicator::before {
+  content: "\f156";
+}
+
+#cidl-lister-search-form {
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+#cidl-tags-search-ajax-label {
+  width: 24%;
+  display: block;
+}
+
+input[type="search"].lister-tag-search {
+  width: 75%;
+  display: inline;
+  border-radius: 5px;
+}
+
+.lister-pagination .page-numbers,
+.lister-pagination .page-numbers.current  {
+  height: 40px;
+  width: 40px;
+  border: gray solid 1px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.lister-pagination .next.page-numbers,
+.lister-pagination .prev.page-numbers  {
+  float: none;
+  border-radius: 5px;
+}
+
+.lister-pagination {
+  text-align: center;
+}
+
+input#lister-download-button {
+  margin-top: 10px;
+}

@@ -1,0 +1,22 @@
+#lister-tags-box {
+    min-height: 42px;
+    max-height: 200px;
+    overflow: auto;
+    padding: 0 0.9em;
+    border: solid 1px #ddd;
+    background-color: #fdfdfd;
+}
+
+.lister-inside {
+    padding: 10px;
+}
+
+.lister-postbox {
+    position: relative;
+/*    min-width: 255px; */
+    border: 1px solid #e5e5e5;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    background: #fff;
+    max-width: 300px;
+}
