@@ -7,22 +7,24 @@ add_action('admin_enqueue_scripts','cidl_enqueue_admin_scripts');
 
 function lister_plugin_assets() {
   // for file download
-  wp_enqueue_script( 'lister-3p-jszip',  plugins_url( '/lister-ajax/js/jszip/dist/jszip.min.js' ), array( 'jquery' ) );
-  wp_enqueue_script( 'lister-3p-jszip-utils',  plugins_url( '/lister-ajax/js/jszip-utils-master/dist/jszip-utils.min.js' ), array( 'jquery' ) );
-  wp_enqueue_script( 'lister-3p-filesaver',  plugins_url( '/lister-ajax/js/FileSaver.js-master/FileSaver.js' ), array( 'lister-3p-jszip', 'lister-3p-jszip-utils') );
+  wp_enqueue_script( 'lister-3p-jszip',  plugins_url( '/lister/js/jszip.min.js' ), array( 'jquery' ) );
+  wp_enqueue_script( 'lister-3p-jszip-utils',  plugins_url( '/lister/js/jszip-utils.min.js' ), array( 'jquery' ) );
+  wp_enqueue_script( 'lister-3p-filesaver',  plugins_url( '/lister/js/FileSaver.min.js' ), array( 'lister-3p-jszip', 'lister-3p-jszip-utils') );
 
   // for tag search
-  wp_enqueue_script('lister-3p-autocomplete-js', plugins_url( '/lister-ajax/js/jquery-ui-1.12.1.custom/jquery-ui.js'), array('jquery'));
-  wp_enqueue_style('lister-3p-autocomplete-css', plugins_url( '/lister-ajax/js/jquery-ui-1.12.1.custom/jquery-ui.css'));
-  wp_enqueue_script('lister-wp-tags-suggest', plugins_url( '/lister-ajax/js/ds_tags_suggest.js'), array('jquery'));
+  wp_enqueue_script('lister-3p-autocomplete-js', plugins_url( '/lister/js/jquery-ui.min.js'), array('jquery'));
+  wp_enqueue_style('lister-3p-autocomplete-css', plugins_url( '/lister/css/jquery-ui.min.css'));
+  wp_enqueue_script('lister-wp-tags-suggest', plugins_url( '/lister/js/ds_tags_suggest.js'), array('jquery'));
 
-  wp_enqueue_style( 'lister-style-css', plugins_url().'/lister-ajax/css/style.css' );
+  wp_enqueue_style( 'lister-style-css', plugins_url().'/lister/css/style.css' );
+  wp_enqueue_style( 'dashicons' );
+  wp_enqueue_style( 'lister-style-css', plugins_url().'/lister/css/style.css' );
   wp_enqueue_style( 'dashicons' );
 
   /* set up ajax - wp_localize_script passes data variable name and wp ajax php script
     handles need to be the same for the script containing the ajax and the localize call  
   */
-  wp_enqueue_script( 'lister-main-js', plugins_url().'/lister-ajax/js/main.js', array('jquery','jquery-ui-sortable','lister-wp-tags-suggest','lister-3p-filesaver') );
+  wp_enqueue_script( 'lister-main-js', plugins_url().'/lister/js/main.js', array('jquery','jquery-ui-sortable','lister-wp-tags-suggest','lister-3p-filesaver') );
 
   wp_localize_script( 'lister-main-js'
                       ,'ajax_object'
