@@ -1,11 +1,15 @@
 # Lister
 ## Lister - List attachments and allow users to download them 
-Contributors: onpoint0
-Tags: attachments, posts, sort, download, list, ajax, jszip
+**Contributors:** Clare Ivers  
+**Requires at least:** WordPress 5.0  
+**Tested up to:** WordPress 5.1  
+**License:** GPLv3 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-3.0.html  
+**Tags:** attachments, posts, sort, download, list, ajax, jszip
 
 # Description 
 
-Lister was designed to list documents and provide download functionality for those documents. It uses Javascript libraries and AJAX to facilitate this.  Lister uses a shortcode[Lister] and a settings screen to display and format its data.
+Lister was designed to list documents and provide download functionality for those documents, however it can also list any kind of page or post type. It uses Javascript libraries and AJAX to facilitate this. Attachments can be limited by file type and by tag. Lister uses a shortcode [Lister] and a settings screen to display and format its data.
 
 ## Installation 
 
@@ -37,3 +41,9 @@ Lister has a number of configurations under Admin > Settings > Lister Plugin Opt
 
 **Date Column Format:** The format of the date column in the list.
 
+
+## Credits
+Lister uses some of libraries built by other people. They are:
+- [FileSaver.js](https://github.com/eligrey/FileSaver.js/)
+- [JSZip](https://stuk.github.io/jszip/)
+- [JQuery](https://jquery.com/)
